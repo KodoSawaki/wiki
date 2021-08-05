@@ -7,7 +7,6 @@ from encyclopedia.util import get_entry
 from encyclopedia.util import list_entries
 from encyclopedia.util import save_entry
 from encyclopedia.util import delete_entry
-from encyclopedia.util import md_to_html
 
 def random_string(len, s = None) -> str:
     """
@@ -70,10 +69,3 @@ class UtilTest(TestCase):
         delete_entry(title)
         self.assertIsNone(get_entry(title))
 
-    def test_md_to_html_return_string(self):
-        """
-        md_to_html(title) returns string
-        """ 
-        title = 'test_' + random_string(10)
-        save_entry(title, '**TEST**')
-        self.assertIsInstance(md_to_html(get_entry(title)))
