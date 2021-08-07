@@ -4,8 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+django = "*"
+markdown2 = "*"
 
 [dev-packages]
+pip = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.9"
