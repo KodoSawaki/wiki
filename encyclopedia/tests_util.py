@@ -15,7 +15,7 @@ def random_string(len, s = None) -> str:
     seed(s)
     return ''.join(choice(string.ascii_letters + string.digits) for x in range(len))
 
-class InternalTest(TestCase):
+class TestsUtilTest(TestCase):
     """
     includes tests for tests.py
     """
